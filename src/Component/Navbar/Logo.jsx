@@ -1,7 +1,7 @@
 
 const Logo = () => {
     return (
-        <div>
+        <div >
             <img src="../../../images/EyeGlass.png" alt="" />
         </div>
     );
