@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "brand": "Bravo Sunglasses",
+      "price": 100,
+      "discounted_price": 150,
+      "off": "10%",
+      "image_url": "https://i.ibb.co/51tvG65/Image-3.png"
+    },
+    {
+      "id": 2,
+      "brand": "Vincent Chase",
+      "price": 120,
+      "discounted_price": 150,
+      "off": "10%",
+      "image_url": "https://i.ibb.co/ZdHV2vz/Image-2.png"
+    },
+    {
+      "id": 3,
+      "brand": "John Jacobs",
+      "price": 100,
+      "discounted_price": " ",
+      "off": "10%",
+      "image_url": "https://i.ibb.co/bsJHDXC/Image-1.png"
+    },
+    {
+      "id": 4,
+      "brand": "Tommy Hilfiger",
+      "price": 130,
+      "discounted_price": 150,
+      "off": "10%",
+      "image_url": "https://i.ibb.co/ZdHV2vz/Image-2.png"
+    },
+    {
+      "id": 5,
+      "brand": "Ray Ban",
+      "price": 100,
+      "discounted_price": " ",
+      "off": "10%",
+      "image_url": "https://example.com/under_armour_image.jpg"
+    },
+    {
+      "id": 6,
+      "brand": "Occhiali",
+      "price": 110,
+      "discounted_price": 150,
+      "off": "10%",
+      "image_url": "https://i.ibb.co/51tvG65/Image-3.png"
+    }
+  ]
+  

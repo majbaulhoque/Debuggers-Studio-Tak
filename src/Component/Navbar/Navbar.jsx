@@ -38,7 +38,6 @@ const Navbar = () => {
                     </div>
                 </nav>
             </div>
-            <Banner></Banner>
         </div>
     );
 };
