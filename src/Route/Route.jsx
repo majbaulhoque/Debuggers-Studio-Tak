@@ -23,7 +23,8 @@ const route = createBrowserRouter([
             },
             {
                 path: '/carts/:id',
-                element: <AddToCart></AddToCart>
+                element: <AddToCart></AddToCart>,
+                loader: () => fetch('/data.json')
             }
         ],
     },

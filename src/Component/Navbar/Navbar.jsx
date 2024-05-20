@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { IoPerson } from "react-icons/io5";
 import Logo from "./Logo";
 import { FaCartShopping } from "react-icons/fa6";
-import SoppingCart from "../Shopping Cart/SoppingCart";
+
 
 const Navbar = () => {
     return (

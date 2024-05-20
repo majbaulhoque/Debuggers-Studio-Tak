@@ -5,7 +5,7 @@ const Product = ({ cart }) => {
     const { id, brand, price, discounted_price, off, image_url, tag } = cart || {}
 
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="card card-compact md:w-96 bg-base-100 shadow-xl mt-10"> 
             <div className="relative bg-[#f7f7f7]">
                 <figure>
                     <img src={image_url} alt={brand} className="w-full h-64 object-cover p-20" />
@@ -18,11 +18,15 @@ const Product = ({ cart }) => {
             <div className="card-body">
                 <h2 className="card-title text-lg font-bold">{brand}</h2>
                 <div className="flex items-center">
-                    <p className="text-base font-semibold ">${price}</p>
-                    <p className="line-through text-gray-500 -ml-60 text-sm">{discounted_price}</p>
+                    <p className="text-base font-semibold">${price}</p>
+                    <p className="line-through text-gray-500 -ml-60 text-sm md:-ml-0"> 
+                        {discounted_price}
+                    </p>
                 </div>
                 <div className="py-5">
-                    <Link to={`/carts/${id}`}><button>Add To Cart</button></Link>
+                    <Link to={`/carts/${id}`}>
+                        <button>Add To Cart</button>
+                    </Link>
                 </div>
             </div>
         </div>
