@@ -25,7 +25,7 @@ const Product = ({ cart }) => {
                 </div>
                 <div className="py-5">
                     <Link to={`/carts/${id}`}>
-                        <button>Add To Cart</button>
+                        <button className="underline text-black text-lg">Add To Cart</button>
                     </Link>
                 </div>
             </div>

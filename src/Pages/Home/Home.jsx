@@ -3,6 +3,7 @@ import Banner from "../../Component/Navbar/Banner";
 import Sunglass from "../../Component/Sunglass/Sunglass";
 import AboutUs from "../About Us/AboutUs";
 import Products from "../Products/Products";
+import Footer from "../Footer/Footer";
 
 
 const Home = () => {
@@ -23,6 +24,9 @@ const Home = () => {
             </div>
             <div>
                 <Products carts={carts}></Products>
+            </div>
+            <div>
+                <Footer></Footer>
             </div>
         </div>
     );
