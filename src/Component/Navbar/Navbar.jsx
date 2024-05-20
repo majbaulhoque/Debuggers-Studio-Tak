@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { FaCartShopping } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
 import Logo from "./Logo";
-import Banner from "./Banner";
+import Cart from "../Shopping Cart/SoppingCart";
+import SoppingCart from "../Shopping Cart/SoppingCart";
 
 const Navbar = () => {
     return (
@@ -17,7 +17,7 @@ const Navbar = () => {
                             <NavLink to='/'>Home</NavLink>
                         </li>
                         <li className="text-lg">
-                            <NavLink to='/about'>About Us</NavLink>
+                            <NavLink to='/'>About Us</NavLink>
                         </li>
                         <li className="text-lg">
                             <NavLink to='/products'>Products</NavLink>
@@ -33,7 +33,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div className="flex gap-5 text-xl">
-                        <FaCartShopping />
+                        <SoppingCart/>
                         <IoPerson />
                     </div>
                 </nav>
