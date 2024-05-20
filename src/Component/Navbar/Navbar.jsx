@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { IoPerson } from "react-icons/io5";
 import Logo from "./Logo";
-import Cart from "../Shopping Cart/SoppingCart";
+import { FaCartShopping } from "react-icons/fa6";
 import SoppingCart from "../Shopping Cart/SoppingCart";
 
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div className="flex gap-5 text-xl">
-                        <SoppingCart/>
+                        <NavLink to='/shoppingCart'><FaCartShopping /></NavLink>
                         <IoPerson />
                     </div>
                 </nav>

@@ -1,7 +1,8 @@
 import { MdFavoriteBorder } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Product = ({ cart }) => {
-    const { id, brand, price, discounted_price, off, image_url} = cart || {}
+    const { id, brand, price, discounted_price, off, image_url, tag } = cart || {}
 
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
@@ -21,7 +22,7 @@ const Product = ({ cart }) => {
                     <p className="line-through text-gray-500 -ml-60 text-sm">{discounted_price}</p>
                 </div>
                 <div className="py-5">
-                    <button>Add To Cart</button>
+                    <Link to={`/carts/${id}`}><button>Add To Cart</button></Link>
                 </div>
             </div>
         </div>
