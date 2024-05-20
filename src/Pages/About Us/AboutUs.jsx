@@ -1,7 +1,7 @@
 const AboutUs = () => {
     return (
         <div className="flex flex-col lg:flex-row">
-            <div className="flex flex-col items-center justify-center w-full lg:w-1/2 p-6 bg-[#fed29c]">
+            <div className="flex flex-col items-center justify-center w-full lg:w-1/2 p-6 bg-[#fed29c] px-4">
                 <div className="max-w-lg mx-auto">
                     <h3 className="text-black font-bold text-3xl mb-4 text-center lg:text-left">
                         Experience clear vision with <br />OptiChroma Vision Frames
