@@ -1,7 +1,25 @@
+import React, { useState } from "react";
 import Product from "../../Component/Product/Product";
 
-
 const Products = ({ carts }) => {
+    const [selectedCategory, setSelectedCategory] = useState("Latest");
+
+    // Function to filter products based on the selected category
+    const filterProducts = (category) => {
+        switch (category) {
+            case "Latest":
+                return carts.filter(cart => cart.tag.includes("latest"));
+            case "Special":
+                return carts.filter(cart => cart.tag.includes("special"));
+            case "Best Sell":
+                return carts.filter(cart => cart.tag.includes("best-sell"));
+            default:
+                return carts;
+        }
+    };
+
+    const filteredProducts = filterProducts(selectedCategory);
+
     return (
         <div className="max-w-7xl mx-auto px-4 py-28">
             <div>
@@ -13,18 +31,33 @@ const Products = ({ carts }) => {
                         Experience crystal clear vision and elevated style with our premium collection of eyeglasses.
                     </p>
                     <div className="flex space-x-4">
-                        <button className="bg-white text-black py-2 px-4 border border-black rounded">Latest</button>
-                        <button className="bg-white text-black py-2 px-4 border border-black rounded">Special</button>
-                        <button className="bg-white text-black py-2 px-4 border border-black rounded">Best Sell</button>
+                        <button
+                            className={`bg-white text-black py-2 px-4 border border-black rounded ${selectedCategory === "Latest" ? "bg-gray-300" : ""}`}
+                            onClick={() => setSelectedCategory("Latest")}
+                        >
+                            Latest
+                        </button>
+                        <button
+                            className={`bg-white text-black py-2 px-4 border border-black rounded ${selectedCategory === "Special" ? "bg-gray-300" : ""}`}
+                            onClick={() => setSelectedCategory("Special")}
+                        >
+                            Special
+                        </button>
+                        <button
+                            className={`bg-white text-black py-2 px-4 border border-black rounded ${selectedCategory === "Best Sell" ? "bg-gray-300" : ""}`}
+                            onClick={() => setSelectedCategory("Best Sell")}
+                        >
+                            Best Sell
+                        </button>
+
                     </div>
                 </div>
-                
             </div>
-            <div className="grid grid-cols-1 md:grid-cols2 lg:grid-cols-3 gap-7">
-                    {
-                        carts?.map(cart => <Product key={cart.id} cart={cart}></Product>)
-                    }
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                {filteredProducts.map(cart => (
+                    <Product key={cart.id} cart={cart} />
+                ))}
+            </div>
         </div>
     );
 };

@@ -15,7 +15,7 @@
       "discounted_price": "$150",
       "off": "10%",
       "image_url": "https://i.ibb.co/ZdHV2vz/Image-2.png",
-      "tag": "latest, Special"
+      "tag": "latest,special"
     },
     {
       "id": 3,
@@ -24,7 +24,7 @@
       "discounted_price": " ",
       "off": "10%",
       "image_url": "https://i.ibb.co/bsJHDXC/Image-1.png",
-      "tag": "latest, Best Sell"
+      "tag": "latest,best-sell"
     },
     {
       "id": 4,
@@ -33,7 +33,7 @@
       "discounted_price": "$150",
       "off": "10%",
       "image_url": "https://i.ibb.co/ZdHV2vz/Image-2.png",
-      "tag": "latest, Best Sell"
+      "tag": "latest, best-sell"
     },
     {
       "id": 5,

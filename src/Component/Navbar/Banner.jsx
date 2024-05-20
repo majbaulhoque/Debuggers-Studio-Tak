@@ -21,8 +21,8 @@ const Banner = () => {
                         </button>
                     </div>
                 </div>
-                <div className="md:flex md:justify-between absolute  lg:-ml-44 mt-20 mx-4 block lg:mx-0 lg:-mt-10">
-                    <div className="w-72 text-center mb-4 md:mb-0">
+                <div className="md:flex md:justify-between absolute mt-20  lg:-ml-44 mx-4 block lg:mx-0 lg:-mt-10">
+                    <div className="w-72 text-center mb-4 md:mb-0 md:-ml-10">
                         <div className="hidden bg-[#fed29c] h-20 w-20 rounded-full lg:flex items-center justify-center mx-auto">
                             <FaSearch className="text-2xl h-9 w-9" />
                         </div>

@@ -19,7 +19,7 @@ const AboutUs = () => {
                 </div>
             </div>
             <div className="flex items-center justify-center w-full lg:w-1/2">
-                <img src="../../../public/images/Image (4).png" alt="OptiChroma Vision Frames" className="max-w-full h-auto"/>
+                <img src="../../../images/Image (4).png" alt="OptiChroma Vision Frames" className="max-w-full h-auto"/>
             </div>
         </div>
     );
