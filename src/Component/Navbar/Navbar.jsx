@@ -13,7 +13,7 @@ const [open, setOpen] = useState(false)
     return (
         <div>
             <div className="bg-white shadow-xl">
-                <nav className="flex max-w-7xl mx-auto justify-between items-center py-6">
+                <nav className="flex max-w-7xl mx-auto justify-between items-center py-6 px-4">
                     <div className="text-2xl md:hidden" onClick={() => setOpen(!open)}>
                         {
                             open === true ? 

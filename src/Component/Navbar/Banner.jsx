@@ -5,6 +5,7 @@ import { MdPayment } from "react-icons/md";
 import { ImTruck } from "react-icons/im";
 
 const Banner = () => {
+    
     return (
         <div className="flex flex-col bg-[#eaeaea]">
             <div className="relative max-w-7xl mx-auto">
