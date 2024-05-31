@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useOutletContext, useParams } from "react-router-dom";
 import AddToCartItem from "./AddToCartItem";
 
 
@@ -13,7 +13,7 @@ const AddToCart = () => {
 
     useEffect(() =>{
         const findAddToCart = addToCart?.find(cart => cart.id.toString() === id)
-        setCart(findAddToCart)
+        setCart(findAddToCart);
     },[addToCart, id])
 
     return (

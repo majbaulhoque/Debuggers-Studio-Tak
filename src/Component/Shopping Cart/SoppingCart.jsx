@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ShoppingCartItem from "./ShoppingCartItem";
 
 
-const SoppingCart = () => {
+const SoppingCart = ({refresh, setRefresh}) => {
     const [carts, setCarts] = useState([]);
     const [noData, setNoData] = useState('')
     const [isShow, setIsShow] = useState(false)
@@ -35,9 +35,9 @@ const SoppingCart = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2">
                     {
-                        isShow ? carts?.map(cart => <ShoppingCartItem key={cart.id} cart={cart}></ShoppingCartItem>) 
+                        isShow ? carts?.map(cart => <ShoppingCartItem key={cart.id} setRefresh={setRefresh} refresh={refresh} cart={cart}></ShoppingCartItem>) 
                         : 
-                        carts?.slice(0,2).map(cart => <ShoppingCartItem key={cart.id} cart={cart}></ShoppingCartItem>) 
+                        carts?.slice(0,2).map(cart => <ShoppingCartItem key={cart.id} setRefresh={setRefresh} refresh={refresh} cart={cart}></ShoppingCartItem>) 
                     }
                 </div>
 

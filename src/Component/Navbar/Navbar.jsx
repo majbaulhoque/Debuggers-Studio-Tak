@@ -6,9 +6,9 @@ import { RiMenu2Fill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { useState } from "react";
 
-const Navbar = () => {
-const [open, setOpen] = useState(false)
-
+const Navbar = ({cartCount}) => {
+    const [open, setOpen] = useState(false)
+    
 
     return (
         <div>
@@ -16,12 +16,12 @@ const [open, setOpen] = useState(false)
                 <nav className="flex max-w-7xl mx-auto justify-between items-center py-6 px-4">
                     <div className="text-2xl md:hidden" onClick={() => setOpen(!open)}>
                         {
-                            open === true ? 
-                            <RxCross2 />
-                            :
-                            <RiMenu2Fill />
+                            open === true ?
+                                <RxCross2 />
+                                :
+                                <RiMenu2Fill />
                         }
-                    
+
                     </div>
                     <div>
                         <Logo />
@@ -30,37 +30,42 @@ const [open, setOpen] = useState(false)
                     ${open ? 'top-16' : '-top-60'}`}>
                         <li className="md:text-lg">
                             <NavLink to='/' className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
-                                }>Home</NavLink>
+                                isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
+                            }>Home</NavLink>
                         </li>
                         <li className="md:text-lg">
                             <NavLink to='/aboutUs' className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
-                                }>About Us</NavLink>
+                                isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
+                            }>About Us</NavLink>
                         </li>
                         <li className="md:text-lg" >
                             <NavLink to='/products' className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
-                                }>Products</NavLink>
+                                isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
+                            }>Products</NavLink>
                         </li>
                         <li className="md:text-lg">
                             <NavLink to='/features' className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
-                                }>Features</NavLink>
+                                isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
+                            }>Features</NavLink>
                         </li>
                         <li className="md:text-lg">
                             <NavLink to='/reviews' className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
-                                }>Reviews</NavLink>
+                                isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
+                            }>Reviews</NavLink>
                         </li>
                         <li className="md:text-lg">
                             <NavLink to='/contact' className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
-                                }>Contact Us</NavLink>
+                                isPending ? "pending" : isActive ? "underline text-[#DF3B41] font-bold" : ""
+                            }>Contact Us</NavLink>
                         </li>
                     </ul>
                     <div className="flex gap-5 lg:text-2xl">
-                        <NavLink to='/shoppingCart'><FaCartShopping /></NavLink>
+                        <NavLink to='/shoppingCart'>
+                            <div className="indicator">
+                                <span className="indicator-item badge badge-secondary">{cartCount}</span>
+                                <FaCartShopping />
+                            </div>
+                        </NavLink>
                         <IoPerson />
                     </div>
                 </nav>
